@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">Selada Segar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="text_home">Home</string>
+    <string name="text_favorit">Favorit</string>
+    <string name="text_pesanan">Pesanan</string>
+    <string name="text_akun">Akun</string>
+    <string name="text_lihat_semua"><u>Lihat Semua</u></string>
+    <string name="rp">Rp. -</string>
+    <string name="Home">Home</string>
+    <string name="Favorit">Favorit</string>
+    <string name="Pesanan">Pesanan</string>
+    <string name="Akun">Akun</string>
+    <string name="Default">default</string>
+    <string name="content_lacak_pesanan">Untuk melacak pesanan Anda, masukkan ID Pesanan Anda di kotak di bawah ini dan tekan tombol "Lacak Pesanan". ID Pesanan diberikan kepada Anda pada tanda terima konfirmasi pembayaran dan dalam email konfirmasi pembayaran anda.</string>
+    <string name="label_title_lp_1"><b>ID Pesanan</b></string>
+    <string name="label_field_lp_1">ID Pesanan telah dikirimkan ke email anda</string>
+    <string name="label_title_lp_2"><b>Email</b></string>
+    <string name="label_field_lp_2">Email yang digunakan pada saat checkout</string>
+    <string name="btn_lacak_pesanan">Lacak Pesanan</string>
+    <string name="text_title_login">Masukkan username dan password anda untuk login</string>
+    <string name="text_title_daftar">Silahkan isi form dibawah ini untuk melakukan pendaftaran</string>
+    <string name="username_email">Username/Email</string>
+    <string name="password">Password</string>
+    <string name="ingat_saya">Ingat Saya</string>
+    <string name="login"><b>Login</b></string>
+    <string name="lupa_password"><b>Lupa Password?</b></string>
+    <string name="atau_login_dengan">atau login dengan</string>
+    <string name="daftar">DAFTAR</string>
+    <string name="konfirmasi_password_anda">Konfirmasi password anda</string>
+    <string name="email">Email</string>
+    <string name="atau_terhubung_dengan">atau terhubung dengan</string>
+    <string name="username">Username</string>
+    <string name="produk_terkait">PRODUK TERKAIT</string>
+    <string name="kode_promo">Kode Promo</string>
+    <string name="terapkan_kode">Terapkan Kode</string>
+    <string name="data_pengiriman">DATA PENGIRIMAN</string>
+    <string name="field_checkout_1">Nama *<p style="color:#F44336">*</p></string>
+    <string name="field_checkout_2">Nomor Telepon (WhasApp) <p style="color:#F44336">*</p></string>
+    <string name="field_checkout_3">Alamat *</string>
+    <string name="field_checkout_4">Catatan Tambahan (opsional)</string>
+    <string name="masukkan_alamat_anda_disini">Masukkan alamat anda disini</string>
+    <string name="field_checkout_5">Alamat Email</string>
+    <string name="buat_akun">Buat Akun?</string>
+    <string name="field_checkout_6">Account username <p style="color:#F44336">*</p></string>
+    <string name="field_checkout_7"><p style="color:#F44336">Create account password *</p></string>
+    <string name="confirm_password">"Konfirmasi Password Anda "</string>
+    <string name="dapatkan_benefit_lebih_dengan_login">Dapatkan Benefit Lebih Dengan Login.</string>
+    <string name="order_anda">ORDER ANDA</string>
+    <string name="price">Sub Total</string>
+    <string name="detail_pembayaran">Detail Pembayaran</string>
+    <string name="ongkir">Ongkir</string>
+    <string name="kode_unik">Kode Promo</string>
+    <string name="total">Total</string>
+    <string name="caution_content">Pesanan diatas jam 10:00 WIB pagi, akan dikirimkan keesokan harinya</string>
+    <string name="bayar_di_tempat_cod">Bayar di Tempat (COD)</string>
+    <string name="bayar_dengan_uang_tunai">Bayar dengan uang tunai</string>
+    <string name="transfer_bank_mandiri">Transfer Bank Mandiri</string>
+    <string name="transfer_bank_bca">Transfer Bank BCA</string>
+    <string name="gunakan_metode_pembayaran_transfer_bank_mandiri">Gunakan metode pembayaran transfer Bank Mandiri</string>
+    <string name="gunakan_metode_pembayaran_transfer_bank_bca">Gunakan metode pembayaran transfer Bank BCA</string>
+    <string name="pesan">Pesan</string>
+    <string name="nomor_rumah_warna_pagar_nomor_unit_kamar_dsb">Nomor Rumah, Warna Pagar, Nomor Unit/Kamar dsb.</string>
+    <string name="hapus">Hapus</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="silahkan_klik_pada_lokasi_anda">Silahkan klik lokasi pengiriman</string>
+    <string name="proses_lokasi">PROSES LOKASI</string>
+    <string name="header_content_after_checkout">Terimakasih. Pesanan anda telah diterima.</string>
+    <string name="konfirmasi_pesanan">KONFIRMASI PESANAN</string>
+    <string name="nomor_pesanan">Nomor Pesanan</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="detail_pesanan">DETAIL PESANAN</string>
+    <string name="metode_pembayaran">Metode Pembayaran</string>
+    <string name="alamat_pengiriman">Alamat Pengiriman</string>
+    <string name="instruksi_pembayaran">Instruksi Pembayaran</string>
+    <string name="instruksi_pembayaran_desc">Pergi ke pusat ATM terdekat atau gunakan Internet/m-banking Anda dan transfer jumlah uang ke nomor rekening bank berikut. Jangan lupa untuk memasukkan ID pesanan saat mentransfer uang</string>
+    <string name="detail_rekening_title">Berikut detail rekening bank untuk memproses pembayaran:</string>
+    <string name="nama_bank">Nama Bank</string>
+    <string name="atas_nama">Atas Nama</string>
+    <string name="pt_bank">SELADA INDONESIA PRODUKTIF</string>
+    <string name="nomor_rekening">Nomor Rekening</string>
+    <string name="_000000">000000</string>
+    <string name="salin">Salin</string>
+    <string name="jumlah_transfer">Jumlah Transfer</string>
+    <string name="konfirmasi_pembayaran">Konfirmasi \nPembayaran</string>
+    <string name="konfirmasi"><u>Konfirmasi Pembayaran</u></string>
+    <string name="rp_0">Rp 0</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="lacakpesanan">LacakPesanan</string>
+    <string name="_3210">#3210</string>
+    <string name="item_name">Bakso Sapi Wagyu Santori \nLihat lainnya...</string>
+    <string name="date">2021-01-21</string>
+    <string name="time">15:30</string>
+    <string name="belum_ada_riwayat_pesanan">Belum ada riwayat pesanan</string>
+    <string name="status">Status</string>
+    <string name="note_keranjang">Keranjangmu masih kosong \nAyo belanja</string>
+    <string name="title">Title</string>
+    <string name="_0">0</string>
+    <string name="total_belanja">Total Belanja:</string>
+    <string name="checkout">Checkout</string>
+    <string name="cari_barang_kebutuhanmu">Cari barang kebutuhanmu</string>
+    <string name="stok_habis">Stok Habis</string>
+    <string name="login_description">Dengan login ke Selada Segar, anda dapat menikmati kemudahan lebih seperti cek histori pesanan, simpan alamat pengiriman dan lain sebagainya</string>
+    <string name="text_title_ubah_akun">Info Akun</string>
+    <string name="simpan">SIMPAN</string>
+    <string name="text_title_ubah_shipping">Ubah Alamat Utama</string>
+    <string name="api_key">AIzaSyAZdidmTJpOjsbcA8mGD2kzcILpAwcklWc</string>
+    <string name="set_default_address">Simpan Perubahan</string>
+    <string name="on_hold">on-hold</string>
+    <string name="transaksi_nberlangsung">Transaksi \nBerlangsung</string>
+    <string name="menunggu_npembayaran">Menunggu \nPembayaran</string>
+    <string name="keluar">Keluar</string>
+    <string name="versi_1_0">Versi 1.0</string>
+    <string name="transfer_bank">Transfer Bank</string>
+    <string name="content_transfer_bank">Tersedia pembayaran transfer ke Rekening Bank BCA, Bank BRI, Bank Mandiri dan Bank BJB</string>
+    <string name="payment_method">Metode Pembayaran</string>
+    <string name="semua">Semua</string>
+    <string name="sedang_ndiproses">Sedang \nDiproses</string>
+    <string name="riwayat_pesanan">Riwayat Pesanan</string>
+    <string name="content_bank"><![CDATA[<html><body><p style="font-size:14px; font-family:quicksand">PT. SELADA INDONESIA PRODUKTIF:<br>
+    BANK:<br>
+    <b>Bank BCA</b><br>
+    NOMOR REKENING:<br>
+    <b>7772340101</b><br><br>
+    PT. SELADA INDONESIA PRODUKTIF:<br>
+    BANK:<br>
+    <b>Bank Mandiri</b><br>
+    NOMOR REKENING:<br>
+    <b>1320022888870</b><br><br>
+    PT. SELADA INDONESIA PRODUKTIF:<br>
+    BANK:<br>
+    <b>Bank BRI</b><br>
+    NOMOR REKENING:<br>
+    <b>038901000982309</b></p>
+    <b></b><b></b>
+    <p style="font-size:10px; font-family:quicksand">*Tap dan tahan untuk menyalin nomor rekening</p></body></html>]]></string>
+    <string name="login_disini">Login disini</string>
+    <string name="sudah_punya_akun">Sudah punya akun?</string>
+    <string name="content_qris">Tersedia pembayaran menggunakan OVO, GOPAY, DANA, dll.</string>
+    <string name="qris">OVO, GoPay, LinkAja, bjb DiGi, BCA Mobile, dll.</string>
+    <string name="pelajari_tentang_qris_disini">Pelajari tentang QRIS <u>disini</u></string>
+    <string name="pindai_kode_untuk_membayar">PINDAI KODE UNTUK MEMBAYAR</string>
+    <string name="content_qris_method">Berikut cara untuk melakukan pembayaran menggunakan QRIS: \n\n
+        1. Pilih metode pembayaran QRIS \n
+        2. Unduh Gambar \n
+        3. Buka aplikasi pembayaran yang diinginkan \n
+        4. Upload QRIS yang telah di unduh \n
+        5. Tulis nominal sesuai tagihan yg tertera di detail pesanan \n
+        6. Tunggu notifikasi transaksi selesai
+    </string>
+    <string name="content_error_field_order">Silahkan lengkapi data order anda</string>
+    <string name="getErrorAlamat">Alamat harus diisi</string>
+    <string name="getErrorNama">Nama harus diisi</string>
+    <string name="getErrorEmail">Email harus diisi</string>
+    <string name="getErrorNomorTelepon">Nomor telepon harus diisi</string>
+    <string name="hint_phone">08XXXXXXXX</string>
+    <string name="nomor_id_pelanggan">Nomor ID Pelanggan</string>
+    <string name="promo">Promo</string>
+    <string name="no_data_voucher">Yaahh... belum ada voucher buat kamu</string>
+    <string name="gunakan_kupon">Gunakan Kupon</string>
+
+</resources>

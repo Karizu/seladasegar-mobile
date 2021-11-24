@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="8dp"
+    android:animateLayoutChanges="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/text_title_ubah_akun"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="@string/nomor_id_pelanggan"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_rectangle_field">
+
+                <TextView
+                    android:id="@+id/tvIdPelanggan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="1"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Nama depan *"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_rectangle_field">
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@color/transparent"
+                    android:hint=""
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Nama belakang *"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_rectangle_field">
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@color/transparent"
+                    android:hint=" "
+                    android:inputType="text"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Nama panggilan *"/>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_rectangle_field">
+
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@color/transparent"
+                    android:hint=" "
+                    android:inputType="text"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Alamat Email (Notifikasi)*"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_rectangle_field">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@color/transparent"
+                    android:hint=" "
+                    android:inputType="textEmailAddress"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Nomor Telepon (Whatsapp)*"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_rectangle_field">
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@color/transparent"
+                    android:hint=" "
+                    android:inputType="phone"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Alamat Lengkap *"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rectangle_field">
+
+                <EditText
+                    android:id="@+id/etAlamatLengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="35dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@color/transparent"
+                    android:hint="Alamat Lengkap (Sesuai Peta)"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"/>
+
+            <FrameLayout
+                android:id="@+id/btnTandaiLokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_gravity="right"
+                android:background="@drawable/bg_button_green"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_outline_place_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tandai Lokasi"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+<!--            <include layout="@layout/fragment_content_shipping" />-->
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"/>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_button_green"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/simpan"
+                android:textColor="@color/white"/>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_text"/>
+
+            <TextView
+                android:id="@+id/tvKeluar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="@string/keluar"
+                android:gravity="left|center"
+                android:drawableStart="@drawable/ic_outline_chevron_left_24"
+                android:drawablePadding="8dp"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_text"/>
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/versi_1_0"
+                android:background="#11111111"
+                android:gravity="left|center"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

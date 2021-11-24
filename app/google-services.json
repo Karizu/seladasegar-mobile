@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "525816666394",
+    "project_id": "selada-segar",
+    "storage_bucket": "selada-segar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525816666394:android:d8397644ca31866afa74a3",
+        "android_client_info": {
+          "package_name": "com.selada.seladasegar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525816666394-984nh2q1jvi6kcv2thafcr16tf1s0v15.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.selada.seladasegar",
+            "certificate_hash": "6d1a3db39b1a5f78e147674e97ea2e491ef5f7c6"
+          }
+        },
+        {
+          "client_id": "525816666394-e1cm4s670jsdtmt6j79s9ugp29mrcu0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7XxONgcoBKZEazXxhwKB5cg3QRV_cNoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525816666394-e1cm4s670jsdtmt6j79s9ugp29mrcu0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

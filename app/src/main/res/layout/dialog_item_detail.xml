@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="5dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/seladasegar_logo"
+                        android:scaleType="centerCrop"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:id="@+id/tvProductName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Sosin/Caisim 1 ikat"
+                            android:textSize="17sp"
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+
+
+                            <TextView
+                                android:id="@+id/tvPriceStrike"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 0"
+                                android:textSize="11sp"
+                                android:textColor="@color/NormalColorText"/>
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="1dp"/>
+
+                            <TextView
+                                android:id="@+id/tvPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 5,000"
+                                android:textColor="@color/light_green"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvProductDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Deskripsi Produk"
+                            android:textSize="14sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/gray_text"/>
+
+                        <LinearLayout
+                            android:id="@+id/layoutButtonCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/cvAddMinCart"
+                                android:layout_width="100dp"
+                                android:layout_height="28dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_gravity="right|bottom"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4">
+
+                                    <FrameLayout
+                                        android:id="@+id/btnMinCart"
+                                        android:layout_width="28dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_rectangle_add_orange"
+                                        android:foreground="?android:attr/selectableItemBackground"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:paddingStart="2dp"
+                                            android:paddingEnd="2dp"
+                                            android:src="@drawable/ic_baseline_remove_white_24"/>
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="46dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2">
+
+                                        <TextView
+                                            android:id="@+id/tvQtyItemCart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:text="0"
+                                            android:src="@drawable/ic_baseline_remove_24"/>
+
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:id="@+id/btnAddCart"
+                                        android:layout_width="28dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_rectangle_add_orange"
+                                        android:foreground="?android:attr/selectableItemBackground"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:paddingStart="2dp"
+                                            android:paddingEnd="2dp"
+                                            android:src="@drawable/ic_baseline_add_white_24"/>
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/btnShare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginStart="4dp"
+                                    android:src="@drawable/share_option"/>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/layoutOnOutOfStock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="6dp"
+                                android:src="@drawable/ic_baseline_error_outline_red_24"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/stok_habis"
+                                android:textSize="15sp"
+                                android:textColor="@color/red_text"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/gray_text"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="KATEGORI"
+                                android:textStyle="bold"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/tvKategoriItem"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="Buah"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_baseline_close_40"/>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

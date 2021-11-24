@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.account.SignInSignUpActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:titleTextColor="@color/NormalGreyText"
+                app:subtitleTextColor="@color/NormalGreyText"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:id="@+id/btnPilihCabang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Area Pengiriman"
+                                android:textColor="@color/almost_black"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textSize="6sp"
+                                android:visibility="visible"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                            <TextView
+                                android:id="@+id/tvAreaPengiriman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kota Bandung"
+                                android:textColor="@color/almost_black"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textSize="9sp"
+                                android:visibility="visible"
+                                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/toolbar_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingStart="12dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+                        <TextView
+                            android:id="@+id/toolbar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Akun"
+                            android:paddingStart="6dp"
+                            android:textColor="@color/almost_black"
+                            android:textAllCaps="true"
+                            android:visibility="visible"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/toolbarIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/seladasegar_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:paddingEnd="6dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:visibility="invisible"
+                            android:id="@+id/toolbar_search_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_baseline_search_24_black"
+                            />
+
+                        <ImageView
+                            android:visibility="invisible"
+                            android:id="@+id/toolbar_whatsapp_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_whatsapp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layoutToolbarAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:id="@+id/frameInfoAkun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitleInfoAkun"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="INFORMASI"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framePesanan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitlePesanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="PESANAN"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!--                <fragment-->
+                <!--                    android:id="@+id/autocomplete_fragment"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+                <!--                    />-->
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/fragment_content_login"
+            android:id="@+id/layout_login"/>
+
+        <include layout="@layout/fragment_content_register"
+            android:visibility="gone"
+            android:id="@+id/layout_register"/>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

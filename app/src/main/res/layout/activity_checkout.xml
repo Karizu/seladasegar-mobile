@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:titleTextColor="@color/NormalGreyText"
+                app:subtitleTextColor="@color/NormalGreyText"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    android:paddingStart="16dp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                    <ImageView
+                        android:id="@+id/toolbar_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/title"
+                        android:textColor="@color/almost_black"
+                        android:textAllCaps="true"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/toolbarIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="gone"
+                    android:src="@drawable/seladasegar_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:paddingEnd="6dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlSymmetry">
+
+                    <ImageView
+                        android:id="@+id/toolbar_search_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_baseline_search_24_black"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/toolbar_whatsapp_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_whatsapp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnPesan">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/dapatkan_benefit_lebih_dengan_login"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"
+                            />
+
+                        <TextView
+                            android:id="@+id/directLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginStart="6dp"
+                            android:text="Klik disini untuk login"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/light_green"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Punya kode promo?"
+                            android:textColor="@color/light_green"/>
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvKodePromo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Klik disini"
+                            android:textStyle="bold"
+                            android:textColor="@color/light_green"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/layoutLineLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sudah_punya_akun"
+                            android:textColor="@color/light_green"/>
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvLoginDisini"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_disini"
+                            android:textStyle="bold"
+                            android:textColor="@color/light_green"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="32dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/data_pengiriman"
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"/>
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/field_checkout_1"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama *"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_rectangle_field">
+
+                            <EditText
+                                android:id="@+id/etNama"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:textSize="13sp"
+                                android:inputType="text"
+                                android:background="@color/transparent"/>
+
+                        </FrameLayout>
+
+<!--                        tambahan-->
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/layout_bekasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="NIK *"/>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_rectangle_field">
+
+                                <EditText
+                                    android:id="@+id/etNIK"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:textSize="13sp"
+                                    android:inputType="number"
+                                    android:background="@color/transparent"/>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/field_checkout_2"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_rectangle_field">
+
+                            <EditText
+                                android:id="@+id/etNomorTelepon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="number"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:textSize="13sp"
+                                android:background="@color/transparent"/>
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/field_checkout_3"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_rectangle_field">
+
+                            <EditText
+                                android:id="@+id/etAlamat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:hint="@string/masukkan_alamat_anda_disini"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:textSize="13sp"
+                                android:background="@color/transparent"/>
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <CheckBox
+                                android:layout_weight="2"
+                                android:visibility="visible"
+                                android:id="@+id/checkboxSetDefaultAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/set_default_address"/>
+
+                            <FrameLayout
+                                android:id="@+id/btnTandaiLokasi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:layout_gravity="right"
+                                android:background="@drawable/bg_button_green"
+                                android:foreground="?android:attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:src="@drawable/ic_outline_place_24"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tandai Lokasi"
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        android:textSize="14sp"/>
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/field_checkout_4"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_rectangle_field">
+
+                            <EditText
+                                android:id="@+id/etNote"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/nomor_rumah_warna_pagar_nomor_unit_kamar_dsb"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:textSize="13sp"
+                                android:background="@color/transparent"/>
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/field_checkout_5"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_rectangle_field">
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:textSize="13sp"
+                                android:background="@color/transparent"/>
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutBuatAkun"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/field_checkout_6"/>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_rectangle_field">
+
+                                <EditText
+                                    android:id="@+id/etAccountUsername"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/username"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:textSize="13sp"
+                                    android:background="@color/transparent"/>
+
+                            </FrameLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/field_checkout_7"/>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_rectangle_field">
+
+                                <EditText
+                                    android:id="@+id/etAccountPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/password"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:textSize="13sp"
+                                    android:background="@color/transparent"/>
+
+                            </FrameLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/field_checkout_7"/>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_rectangle_field">
+
+                                <EditText
+                                    android:id="@+id/etConfirmPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/confirm_password"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:textSize="13sp"
+                                    android:background="@color/transparent"/>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_anda"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:paddingStart="@dimen/padding_10"
+                            android:paddingEnd="@dimen/padding_10"
+                            android:paddingBottom="8dp"
+                            android:background="@drawable/bg_rectangle_outside">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvItemCheckout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:layoutAnimation="@anim/layout_animation"
+                                    android:paddingBottom="12dp"/>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:visibility="visible"
+                            android:id="@+id/frameKodePromo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:padding="16dp"
+                            android:background="@drawable/bg_rectangle_frame">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jika Anda memiliki kode kupon, masukkan di bawah ini."
+                                    android:textColor="@color/Black"
+                                    android:textStyle="bold"/>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/bg_rectangle_field">
+
+                                    <EditText
+                                        android:id="@+id/etKodePromo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingStart="12dp"
+                                        android:paddingEnd="12dp"
+                                        android:textSize="13sp"
+                                        android:hint="@string/kode_promo"
+                                        android:background="@color/transparent"/>
+
+                                </FrameLayout>
+
+                                <Button
+                                    android:id="@+id/btnTerapkanKode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@string/terapkan_kode"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:background="@color/light_green"/>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/layoutCouponTerpakai"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/bg_outside_green"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvCouponName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1 Kupon terpasang"
+                                android:textSize="13sp"
+                                android:textColor="@color/Green"/>
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/bg_rectangle_outside">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="16dp"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/detail_pembayaran"
+                                    android:textColor="@color/Black"
+                                    android:textStyle="bold"/>
+                                
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/price"/>
+
+                                    <TextView
+                                        android:id="@+id/tvSubTotal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="0"
+                                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="8dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/ongkir"/>
+
+
+                                    <TextView
+                                        android:id="@+id/tvOngkir"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Gratis Ongkir"
+                                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:visibility="visible"
+                                    android:layout_height="8dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/tvTitlePromo"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/kode_unik"/>
+
+
+                                    <TextView
+                                        android:id="@+id/tvKodeUnik"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="-"
+                                        android:visibility="visible"
+                                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="8dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/layoutTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:focusableInTouchMode="true"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/Black"
+                                        android:textStyle="bold"
+                                        android:text="@string/total"/>
+
+
+                                    <TextView
+                                        android:id="@+id/tvTotal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/Black"
+                                        android:textStyle="bold"
+                                        android:gravity="right"
+                                        android:text="Rp 1"
+                                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingBottom="@dimen/padding_10"
+                        android:background="@color/Red">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/caution_content"
+                            android:textColor="@color/white"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_rectangle_outside">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            tools:ignore="MissingConstraints">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="16sp"
+                                android:paddingTop="@dimen/padding_10"
+                                android:paddingEnd="8dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/metode_pembayaran"
+                                android:textColor="@color/Black"
+                                android:textStyle="bold"/>
+
+                            <LinearLayout
+                                android:id="@+id/frameCOD"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/padding_10"
+                                android:paddingEnd="@dimen/padding_10"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/checkboxCOD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/bayar_di_tempat_cod"/>
+
+                                <TextView
+                                    android:id="@+id/tvCOD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:visibility="gone"
+                                    android:text="@string/bayar_dengan_uang_tunai"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/NormalGreyText"/>
+
+                            <LinearLayout
+                                android:id="@+id/frameTransferBank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/padding_10"
+                                android:paddingEnd="@dimen/padding_10"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/checkboxTransferBank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/transfer_bank"/>
+
+                                <TextView
+                                    android:id="@+id/tvTransferBank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:visibility="gone"
+                                    android:text="@string/content_transfer_bank"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/NormalGreyText"/>
+
+                            <LinearLayout
+                                android:id="@+id/frameQris"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/padding_10"
+                                android:paddingEnd="@dimen/padding_10"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/checkboxQris"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/qris"/>
+
+                                <TextView
+                                    android:id="@+id/tvQris"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:visibility="gone"
+                                    android:text="@string/content_qris"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/btnPesan"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/light_green"
+            android:layout_alignParentBottom="true"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/pesan"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

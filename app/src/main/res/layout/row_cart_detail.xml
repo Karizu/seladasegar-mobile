@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginTop="6dp"
+            android:gravity="left"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="UnusedAttribute">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/menu_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="8dp"
+                        android:maxLines="1"
+                        android:gravity="left|center"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"
+                        android:paddingBottom="2dp"
+                        android:text="Sayur"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText,RtlHardcoded,SmallSp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/btnMinCart"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="4dp"
+                            android:padding="4dp"
+                            android:background="@drawable/bg_rectangle_add"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_baseline_remove_white_24"
+                                tools:ignore="ContentDescription,TooDeepLayout" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="36dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="4dp"
+                            android:padding="4dp"
+                            android:background="@drawable/bg_rectangle_outside"
+                            >
+
+                            <TextView
+                                android:id="@+id/menu_qty"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="11sp"
+                                android:text="0"
+                                android:src="@drawable/ic_baseline_remove_24"/>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/btnAddCart"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:padding="4dp"
+                            android:background="@drawable/bg_rectangle_add"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_baseline_add_white_24"
+                                tools:ignore="ContentDescription,TooDeepLayout" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:gravity="right|center">
+
+                    <TextView
+                        android:id="@+id/menu_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:text="Rp. 4500"
+                        tools:ignore="RtlHardcoded" />
+
+                    <ImageView
+                        android:id="@+id/btnDeleteCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_outline_delete_24"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/gray_text"/>
+
+</LinearLayout>

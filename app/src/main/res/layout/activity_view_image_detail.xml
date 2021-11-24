@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+    tools:context=".services.ViewImageDetail">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_baseline_close_white_24"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgUnduh"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_unduh"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/seladasegar_logo"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/imgClose"/>
+
+</RelativeLayout>

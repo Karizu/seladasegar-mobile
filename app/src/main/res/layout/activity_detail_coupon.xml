@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.coupons.DetailCouponActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:titleTextColor="@color/NormalGreyText"
+                app:subtitleTextColor="@color/NormalGreyText"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:id="@+id/btnPilihCabang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+                            <TextView
+                                android:id="@+id/tvAreaPengiriman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:text="Detail Kupon"
+                                android:textColor="@color/Black"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textSize="13sp"
+                                android:visibility="visible"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/toolbarIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/seladasegar_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:paddingEnd="4dp"
+                        android:gravity="right"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/toolbar_search_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/search"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/toolbar_whatsapp_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_whatsapp_24"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layoutToolbarAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:id="@+id/frameInfoAkun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitleInfoAkun"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="INFORMASI"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framePesanan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitlePesanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="PESANAN"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!--                <fragment-->
+                <!--                    android:id="@+id/autocomplete_fragment"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+                <!--                    />-->
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnGunakanKupon"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="-40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_coupons"/>
+
+                <TextView
+                    android:id="@+id/tvDiskon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:paddingTop="20dp"
+                    android:paddingStart="185dp"
+                    android:paddingBottom="20dp"
+                    android:text="Diskon -"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDiskonTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diskon Hingga -"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Berlaku hingga"
+                        android:textColor="@color/NormalColorText"
+                        android:fontFamily="@font/quicksand_reguler"
+                        android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                        android:drawablePadding="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvExpiredDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="-"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:textStyle="bold"
+                        android:textColor="@color/NormalColorText"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Minimum transaksi"
+                        android:textColor="@color/NormalColorText"
+                        android:fontFamily="@font/quicksand_reguler"
+                        android:drawableLeft="@drawable/ic_baseline_money_24"
+                        android:drawablePadding="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvMinimumTrx"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="-"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:textStyle="bold"
+                        android:textColor="@color/NormalColorText"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey_background"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Syarat &amp; Ketentuan"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:layout_marginBottom="8dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvSyaratKetentuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. -"
+                    android:textColor="@color/NormalColorText"
+                    android:fontFamily="@font/quicksand_reguler"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey_background"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cara Pakai"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:layout_marginBottom="6dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Masuk ke halaman Kupon Saya dan pilih Kupon."
+                    android:textColor="@color/NormalColorText"
+                    android:fontFamily="@font/quicksand_reguler"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Gunakan Kupon pada saat checkout."
+                    android:textColor="@color/NormalColorText"
+                    android:fontFamily="@font/quicksand_reguler"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Dapatkan notifikasi jika Kupon sudah berhasil digunakan."
+                    android:textColor="@color/NormalColorText"
+                    android:fontFamily="@font/quicksand_reguler"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGunakanKupon"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/gunakan_kupon"
+            android:textColor="@color/White"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@color/orangish"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

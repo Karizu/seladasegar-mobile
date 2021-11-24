@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_ocean"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapseActionView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                shimmer:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="12dp"
+                        shimmer:cardCornerRadius="4dp"
+                        android:layout_marginBottom="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/header"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:paddingStart="@dimen/padding_10"
+                                android:paddingTop="@dimen/padding_10"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/bjbdigi"/>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="8dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Rp0"
+                                            android:textSize="11sp"
+                                            android:textColor="@color/Black"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Segera Hadir"
+                                            android:textSize="11sp"
+                                            android:textColor="@color/light_green"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:paddingStart="@dimen/padding_10"
+                                android:paddingTop="@dimen/padding_10"
+                                android:paddingBottom="@dimen/padding_10"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/point"/>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="8dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Rp0 (0 Points)"
+                                            android:textSize="11sp"
+                                            android:textColor="@color/Black"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Segera Hadir"
+                                            android:textSize="11sp"
+                                            android:textColor="@color/light_green"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/layCoupon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/coupon"/>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="8dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Kupon"
+                                            android:textSize="11sp"
+                                            android:textColor="@color/Black"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="10 Kupon"
+                                            android:textSize="11sp"
+                                            android:textColor="@color/NormalGreyText"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="12dp"
+                        shimmer:cardCornerRadius="4dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ss.com.bannerslider.Slider
+                                    android:id="@+id/banner_slider"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    />
+
+                            </FrameLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_indicator"/>
+
+                            <LinearLayout
+                                android:id="@+id/pagesContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"/>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/layoutCoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_outside_green"
+                        android:gravity="center"
+                        android:weightSum="5"
+                        android:orientation="horizontal"
+                        android:layout_margin="12dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tvTotalCoupon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ada 10 kupon belanja menunggumu."
+                                android:textSize="13sp"
+                                android:textColor="@color/Green"/>
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_weight="0.5">
+
+                            <View
+                                android:layout_width="1.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_dots" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/btnLihatKupon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="70dp"
+                                android:layout_height="35dp"
+                                shimmer:cardCornerRadius="4dp"
+                                shimmer:cardBackgroundColor="@color/green"
+                                android:layout_gravity="center"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Lihat"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/White"
+                                        android:textStyle="bold"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_container_coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_margin="12dp"
+                        shimmer:shimmer_duration="800">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <include layout="@layout/data_placeholder_coupon" />
+                        </LinearLayout>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/frameSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_rectangle_outside"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/etSearch"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:background="@color/transparent"-->
+<!--                        android:hint="@string/cari_barang_kebutuhanmu"-->
+<!--                        android:inputType="text"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="@color/Black"/>-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imgClearSearch"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:src="@drawable/ic_baseline_close_40"/>-->
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+<!--            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                android:id="@+id/shimmer_view_container_category"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:visibility="gone"-->
+<!--                shimmer:shimmer_duration="800">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <include layout="@layout/data_placeholder_category_layout" />-->
+<!--                    <include layout="@layout/data_placeholder_category_layout" />-->
+<!--                    <include layout="@layout/data_placeholder_category_layout" />-->
+<!--                </LinearLayout>-->
+
+<!--            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal"
+                android:layout_margin="12dp"
+                android:weightSum="3"
+                android:layout_below="@+id/collapseActionView">
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/btnShowCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_round_category"
+                    android:layout_weight="2.3">
+
+                    <TextView
+                        android:id="@+id/tvCategoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center"
+                        android:text="Promo Hari Ini"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/frameSearchText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingStart="16dp"
+                    android:background="@drawable/bg_round_category"
+                    android:layout_weight="0.7">
+
+                    <ImageView
+                        android:id="@+id/imgSearchText"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_search_24_black"
+                        android:layout_alignParentStart="true"
+                        />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/layoutSearch"
+                        android:layout_toEndOf="@+id/imgSearchText"
+                        android:layout_marginStart="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/padding_10"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/etSearch"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@color/transparent"
+                            android:hint="@string/cari_barang_kebutuhanmu"
+                            android:inputType="text"
+                            android:textSize="13sp"
+                            android:textColor="@color/Black"/>
+
+                        <ImageView
+                            android:id="@+id/imgClearSearch"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_baseline_close_40"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCari"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:text="Cari"
+                        android:textSize="13sp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_margin="12dp"
+                shimmer:shimmer_duration="800">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/data_placeholder_category_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:visibility="gone"
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/collapseActionView"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="6dp"
+                shimmer:tabMode="scrollable"
+                shimmer:tabContentStart="12dp"
+                style="@style/AppTabLayout"
+                shimmer:tabTextAppearance="@style/AppTabTextAppearance"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white_ocean"
+            tools:ignore="MissingClass"
+            shimmer:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swipeContainer">
+
+                <LinearLayout
+                    android:id="@+id/layoutFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="MissingClass">
+
+                    <LinearLayout
+                        android:id="@+id/layoutSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmer_view_container_feed_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            shimmer:shimmer_duration="800">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <include layout="@layout/data_placeholder_feed_layout" />
+                                <include layout="@layout/data_placeholder_feed_layout" />
+                                <include layout="@layout/data_placeholder_feed_layout" />
+                                <include layout="@layout/data_placeholder_feed_layout" />
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvHomeTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="12dp"
+                            tools:listitem="@layout/row_home_feed_header"/>
+
+                        <TextView
+                            android:id="@+id/lsPBD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:textColor="@color/Orange"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            android:text="@string/text_lihat_semua"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/bottom_sheet_category" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

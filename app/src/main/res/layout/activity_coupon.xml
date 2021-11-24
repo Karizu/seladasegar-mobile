@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.coupons.CouponActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:titleTextColor="@color/NormalGreyText"
+                app:subtitleTextColor="@color/NormalGreyText"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:id="@+id/btnPilihCabang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+                            <TextView
+                                android:id="@+id/tvAreaPengiriman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:text="Kupon Saya"
+                                android:textColor="@color/Black"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textSize="13sp"
+                                android:visibility="visible"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/toolbarIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/seladasegar_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:paddingEnd="4dp"
+                        android:gravity="right"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/toolbar_search_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/search"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/toolbar_whatsapp_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_whatsapp_24"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layoutToolbarAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:id="@+id/frameInfoAkun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitleInfoAkun"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="INFORMASI"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framePesanan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitlePesanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="PESANAN"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!--                <fragment-->
+                <!--                    android:id="@+id/autocomplete_fragment"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+                <!--                    />-->
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/padding_10"
+            android:paddingEnd="@dimen/padding_10"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCoupons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/no_data_voucher"
+                android:textColor="@color/NormalColorText"
+                tools:ignore="RtlHardcoded"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

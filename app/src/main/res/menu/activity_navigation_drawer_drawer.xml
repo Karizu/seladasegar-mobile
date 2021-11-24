@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/grp_home"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:title="Produk Favorit Anda"/>
+    </group>
+    <group android:id="@+id/grp_forum_diskusi"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_forum_diskusi"
+            android:title="Login or Register"/>
+    </group>
+    <group android:id="@+id/grp_berita_pengumuman"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_berita_pengumuman"
+            android:title="Lacak Pesanan"/>
+    </group>
+    <group android:id="@+id/grp_direktori_anggota"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_direktori_anggota"
+            android:title="Kontak Kami"/>
+    </group>
+    <group android:id="@+id/grp_artikel"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/nav_artikel"
+            android:title="Home"/>
+    </group>
+    <group android:id="@+id/grp_kalender_kegiatan"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_kalender_kegiatan"
+            android:title="Belanja Sekarang"/>
+    </group>
+    <group android:id="@+id/grp_pengaturan"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_setting"
+            android:title="Daftar Produk"/>
+    </group>
+    <group android:id="@+id/grp_pesanan"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_lacak_pesanan"
+            android:title="Lacak Pesanan"/>
+    </group>
+
+</menu>

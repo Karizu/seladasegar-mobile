@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://superfriends-api.ap-southeast-1.elasticbeanstalk.com</domain>
+        <domain includeSubdomains="true">superfriends-api.ap-southeast-1.elasticbeanstalk.com</domain>
+        <domain includeSubdomains="true">36.94.58.180</domain>
+        <domain includeSubdomains="true">https://www.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://apk-dl.com</domain>
+        <domain includeSubdomains="true">www.seladasegar.com</domain>
+        <domain includeSubdomains="true">www.bandung.seladasegar.com</domain>
+        <domain includeSubdomains="true">bandung.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://bandung.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://karawang.seladasegar.com</domain>
+        <domain includeSubdomains="true">karawang.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://belitung.seladasegar.com</domain>
+        <domain includeSubdomains="true">belitung.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://cilegon.seladasegar.com</domain>
+        <domain includeSubdomains="true">cilegon.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://bekasi.seladasegar.com</domain>
+        <domain includeSubdomains="true">bekasi.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://tangerang.seladasegar.com</domain>
+        <domain includeSubdomains="true">tangerang.seladasegar.com</domain>
+        <domain includeSubdomains="true">https://cirebon.seladasegar.com</domain>
+        <domain includeSubdomains="true">cirebon.seladasegar.com</domain>
+    </domain-config>
+</network-security-config>

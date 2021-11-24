@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:titleTextColor="@color/NormalGreyText"
+                app:subtitleTextColor="@color/NormalGreyText"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:id="@+id/layout_koperasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/logo_koperasi"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/logo_suzuki"/>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutCabang"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/btnPilihCabang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Area Pengiriman"
+                                android:textColor="@color/almost_black"
+                                android:textAllCaps="true"
+                                android:textSize="8sp"
+                                android:visibility="visible"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                            <TextView
+                                android:id="@+id/tvAreaPengiriman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kota Bandung"
+                                android:textColor="@color/Black"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:visibility="visible"
+                                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/toolbar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Title"
+                            android:textColor="@color/almost_black"
+                            android:textAllCaps="true"
+                            android:visibility="gone"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/toolbarIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/seladasegar_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:paddingEnd="4dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/toolbar_search_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/search"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/toolbar_whatsapp_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_whatsapp_24"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layoutToolbarAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:id="@+id/frameInfoAkun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitleInfoAkun"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="INFORMASI"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framePesanan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_rectangle_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarTitlePesanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="PESANAN"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/NormalColorText"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+<!--                <fragment-->
+<!--                    android:id="@+id/autocomplete_fragment"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+<!--                    />-->
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            layout="@layout/content_navigation_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/frameBottomNav" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/layoutCart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rectangle_add"
+            android:layout_above="@id/frameBottomNav"
+            android:layout_alignEnd="@id/frameBottomNav">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_belanja"
+                android:layout_marginStart="8dp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextSwitcher
+                android:id="@+id/cartTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/_0"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/_0"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+            </TextSwitcher>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDetailCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/frameBottomNav"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginBottom="14dp">
+
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/cvKupon"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:id="@+id/btnKupon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/light_green">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="1 Kupon Terpasang"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/btnDeleteCoupon"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:padding="6dp"
+                        android:background="@color/orangish">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_delete_24"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_green"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="@dimen/padding_10"
+                        android:paddingBottom="@dimen/padding_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_belanja"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+
+                        <TextSwitcher
+                            android:id="@+id/cart_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/_0"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/_0"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="14sp"/>
+
+                        </TextSwitcher>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCartDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation"/>
+
+                    <TextView
+                        android:id="@+id/tvNoData"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:text="@string/note_keranjang"
+                        android:textColor="@color/NormalColorText"
+                        tools:ignore="RtlHardcoded"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:id="@+id/btnCheckout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/light_green">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="@string/checkout"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/btnClose"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:padding="6dp"
+                        android:background="@color/orangish">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_close_white_24"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/navHome"
+                    android:layout_width="0dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgNavHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_home_24"/>
+
+                    <TextView
+                        android:id="@+id/tvNavHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/navFav"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgNavFav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_outline_favorite_border_grey_24"/>
+
+                        <TextView
+                            android:id="@+id/tvBadgeCount"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignEnd="@id/imgNavFav"
+                            android:layout_marginTop="1dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="5sp"
+                            android:visibility="gone"
+                            style="@style/Widget.Design.FloatingActionButton"
+                            android:text="0"
+                            tools:ignore="SmallSp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvNavFav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Favorit"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navKeranjang"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgNavKeranjang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_shopping_cart_24"/>
+
+                    <TextView
+                        android:id="@+id/tvNavKeranjang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Keranjang"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgNavAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_person_24"/>
+
+                    <TextView
+                        android:id="@+id/tvNavAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Akun"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_gravity="bottom"
+                app:menu="@menu/bottom_navigation_main"
+                android:background="@color/white"
+                app:labelVisibilityMode="unlabeled"
+                app:itemTextColor="@color/bottom_nav_color"
+                app:itemIconTint="@color/NormalGreyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
